@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>GitLost</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="bootstrap-dialog.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.css">
+    <link rel="stylesheet" href="bootstrap-dialog.css" />
+    <link rel="stylesheet" href="graph.css" />
+</head>
+<body>
+    <div class="panel-group">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitInit">git init</a>
+                </h4>
+            </div>
+            <div id="gitInit" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Create a new local repository:</div>
+                    <div><code>git init</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitClone">git clone</a>
+                </h4>
+            </div>
+            <div id="gitClone" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Create a working copy of a local repository:</div>
+                    <div><code>git clone /path/to/repository</code></div>
+                    <div>git clone username@host:/path/to/repository</div>
+                    <div><code>git clone username@host:/path/to/repository</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitCheckout">git checkout</a>
+                </h4>
+            </div>
+            <div id="gitCheckout" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Create a new branch and switch to it:</div>
+                    <div><code>git checkout -b [branchname]</code></div>
+                    <div>Switch from one branch to another:</div>
+                    <div><code>git checkout [branchname]</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitAdd">git add</a>
+                </h4>
+            </div>
+            <div id="gitAdd" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Add one or more files to staging (index):</div>
+                    <div><code>git add [filename]</code></div>
+                    <div><code>git add *</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitFetch">git fetch</a>
+                </h4>
+            </div>
+            <div id="gitFetch" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Obtain the latest history from the server:</div>
+                    <div><code>git fetch</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitPull">git pull</a>
+                </h4>
+            </div>
+            <div id="gitPull" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Fetch and merge changes on the remote server to your working directory:</div>
+                    <div><code>git pull</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitStatus">git status</a>
+                </h4>
+            </div>
+            <div id="gitStatus" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>List the files you've changed and those you still need to add or commit:</div>
+                    <div><code>git status</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitPush">git push</a>
+                </h4>
+            </div>
+            <div id="gitPush" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Send changes to the master branch of your remote repository:</div>
+                    <div><code>git push</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#gitCommit">git commit</a>
+                </h4>
+            </div>
+            <div id="gitCommit" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div>Commit changes to head (but not yet to the remote repository):</div>
+                    <div><code>git commit -m "Commit message"</code></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
