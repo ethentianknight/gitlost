@@ -200,6 +200,26 @@ $(function () {
             });
         }
     }
+    function change_command_text(body, header, example) {
+        $("#commandTextHeader").text(header);
+        $("#commandTextBody").text(body);
+        $("#commandTextExample").text(example);
+
+    }
+    $('.commandOption')
+        .click(function () {
+            body = 'todo: fix me';
+            command = 'todo: fix me';
+            switch (event.target.text) {
+                case 'fetch':
+                    body = 'Fetch will obtain the latest history from the server.'
+                    command = 'git fetch -u -i -p'
+                    break;
+                default:
+                    break;
+            }
+            change_command_text(body, "git -" + event.target.text, command);
+        })
     // startup
     get_graph();
 });

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -22,7 +22,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                <span class="navbar-brand" href="#">Project name</span>
+                    <span class="navbar-brand" href="#">Project name</span>
                 </div>
                 <div id="navbar" class="navbar">
                     <ul class="nav navbar-nav">
@@ -32,8 +32,7 @@
                             <button name="rankdir" value="BT" type="button" class="btn btn-default">&#x1f819;&nbsp;BT</button>
                             <button name="rankdir" value="TB" type="button" class="btn btn-default">&#x1f81b;&nbsp;TB</button>
                         </div>
-                        <select name="refs" class="selectpicker" multiple>
-                        </select>
+                        <select name="refs" class="selectpicker" multiple></select>
                         <button name="include_forward" type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Include Forward Branches</button>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -42,6 +41,65 @@
                 </div>
             </div>
         </nav>
+
+        <div id="command_pane" class="panel panel-default">
+            <div class="panel-heading">
+                <h1>Commands</h1>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="commandPullDdl" data-toggle="dropdown">
+                            Pulling
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="commandPullDdl">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">fetch</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">pull</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">status</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">branch</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="commandPullDdl" data-toggle="dropdown">
+                            Pushing
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="commandPullDdl">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">init</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">add</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">push</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">merge</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="commandPullDdl" data-toggle="dropdown">
+                            General
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="commandPullDdl">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">config</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="commandOption">reset</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 id="commandTextHeader">Command Name</h3>
+                            <div class="col-md-6">
+                                <p id="commandTextBody">This command does thing.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p id="commandTextExample">git -stash save "MarksStash"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <div id="svg_div"></div>
         <div id="show"></div>
